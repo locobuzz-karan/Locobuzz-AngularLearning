@@ -1,0 +1,22 @@
+<section id="main-body" class="body-container">
+  <div class="content-section">
+    <h2 class="section-title">Backend Developer at Locobuzz</h2>
+    <p class="section-description">
+      Hello, I am a backend developer at Locobuzz Solutions Pvt. Ltd., working with .NET technologies for one of Locobuzz's biggest clients — Jio.
+    </p>
+
+    <!-- Centered Button -->
+    <div class="button-wrapper">
+      <button class="skills-button" (click)="toggleSkillsCard()">Show Skills</button>
+    </div>
+
+    <!-- Skills Card -->
+    <div class="skills-card" *ngIf="showSkill">
+      <h3 class="skills-title">My Skills</h3>
+      <ul class="skills-list">
+        <li *ngFor="let data of Skills">{{ data }}</li>
+      </ul>
+    </div>
+    
+  </div>
+</section>
