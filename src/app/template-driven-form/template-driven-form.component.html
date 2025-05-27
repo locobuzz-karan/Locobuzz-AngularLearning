@@ -1,0 +1,58 @@
+
+<form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+  <!-- Name -->
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      class="form-control"
+     [(ngModel)] = "userData.Name"
+      required
+      #name="ngModel"
+    />
+  </div>
+
+  <!-- Email -->
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      class="form-control"
+      [(ngModel)] = "userData.Email"
+      required
+      email
+      #email="ngModel"
+    />
+  </div>
+
+  <!-- Gender -->
+  <div class="form-group">
+    <label>Gender:</label>
+    <select name="gender"
+     [(ngModel)] = "userData.Gender"
+     required #gender="ngModel">
+      <option value="" disabled selected>Select</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
+
+  <!-- Submit -->
+   <button type="submit">Register</button>
+</form> 
+
+<!-- Display Model -->
+<div class="pre-container">
+  <pre class="pretag">
+    <h4>Json Pipe: {{ userData | json }} </h4> 
+    <h4>UpperCase Pipe: {{ userData.Name | uppercase }} </h4> 
+    <h4>LowerCase Pipe: {{ userData.Email | lowercase }} </h4>
+    <h4>DateTime UTC: {{currentDate}}  -> (Date Pipe): {{ currentDate | date:'medium' }} </h4>
+  </pre>
+</div>
+
+
