@@ -1,0 +1,15 @@
+<form [formGroup]="USerDataForm" (ngSubmit)="onSubmit()">
+  <label>Name:</label>
+  <input formControlName="UserName" />
+  <div class="error-message" *ngIf="USerDataForm.get('UserName')?.invalid && USerDataForm.get('UserName')?.touched">
+    Name is required.
+  </div>
+
+  <label>Email:</label>
+  <input formControlName="USerEmail" />
+  <div class="error-message" *ngIf="USerDataForm.get('USerEmail')?.invalid && USerDataForm.get('USerEmail')?.touched">
+    Enter a valid email.
+  </div>
+
+  <button type="submit" [disabled]="USerDataForm.invalid">Submit</button>
+</form>
