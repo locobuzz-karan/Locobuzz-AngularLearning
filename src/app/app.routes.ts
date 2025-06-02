@@ -4,6 +4,7 @@ import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { ToDoAppComponent } from './to-do-app/to-do-app.component';
+import { ParentComponent } from './parent/parent.component';
 
 
 export const routes: Routes = [
@@ -11,5 +12,6 @@ export const routes: Routes = [
      {path: 'About', component: AboutComponent },  
      {path:'TemplateDrivenForm', component:TemplateDrivenFormComponent},
      {path:'ReactiveForm',component:ReactiveFormsComponent},
-     {path:'ToDoApp' , component:ToDoAppComponent}
+     {path:'ToDoApp' , component:ToDoAppComponent},
+     {path:'SiblingCommunicaton' , component:ParentComponent}
 ];
