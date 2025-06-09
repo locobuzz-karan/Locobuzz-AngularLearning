@@ -5,6 +5,7 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { ToDoAppComponent } from './to-do-app/to-do-app.component';
 import { ParentComponent } from './parent/parent.component';
+import { NgMaterialComponent } from './ng-material/ng-material.component';
 
 
 export const routes: Routes = [
@@ -13,5 +14,6 @@ export const routes: Routes = [
      {path:'TemplateDrivenForm', component:TemplateDrivenFormComponent},
      {path:'ReactiveForm',component:ReactiveFormsComponent},
      {path:'ToDoApp' , component:ToDoAppComponent},
-     {path:'SiblingCommunicaton' , component:ParentComponent}
+     {path:'SiblingCommunicaton' , component:ParentComponent},
+     {path:'ngMaterial' , component:NgMaterialComponent}
 ];
